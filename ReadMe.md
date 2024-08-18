@@ -15,6 +15,10 @@ cases provided.
 Document your code, explaining your approach, any assumptions made, and how
 the solution is expected to perform with large inputs.
 
+### Answer
+
+This travelling salesperson problem assumes Euclidean distance used, all nodes interconnected, and symmetric cost on arc directions. Brute force algorithm takes $O(n!)$ time complexity. This algorithm, dynamic programming, memoizes the lowest-cost path to a place via some places, enabling it to know which the next place is to have lowest cost. The time complexity is $O(2^nn^2)$: the via_set is a subset of n places, there are $2^n$ subsets, and for each iteration, the via_set as part of the key gets combined with $O(n)$ to_nodes, and each combination searches through $O(n)$ items in the via_set, which will produce $O(2^nn^2)$ faster than $O(n!)$.
+
 ## Instructions
 
 ### Setup
